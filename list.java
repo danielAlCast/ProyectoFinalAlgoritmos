@@ -94,115 +94,6 @@ class list<T> {
         // new value now points to former current node
         prev.next.next = temp;
     }
-    // Method
-    // To remove a node from list
-    void remove(T key)
-    {
-
-        //  NOTE
-        // dummy node is used to represent the node before
-        // the current node Since in a Singly Linked-List we
-        // cannot go backwards from a node, we use a dummy
-        // node to represent the previous node. In case of
-        // head node, since there is no previous node, the
-        // previous node is assigned to null.
-
-        // Dummy node with null value
-        node<T> prev = new node<>(null);
-
-        // Dummy node pointing to head node
-        prev.next = head;
-
-        // Next node that points ahead of current node
-        node<T> next = head.next;
-
-        // Temporary node for traversal
-        node<T> temp = head;
-
-        // Boolean value that checks whether value to be
-        // deleted exists or not
-        boolean exists = false;
-
-        // If head node needs to be deleted
-        if (head.data == key) {
-            head = head.next;
-
-            // Node to be deleted exists
-            exists = true;
-        }
-
-        // Iterating over LinkedList
-        while (temp.next != null) {
-
-            // We convert value to be compared into Strings
-            // and then compare using
-            // String1.equals(String2) method
-
-            // Comparing value of key and current node
-            if (String.valueOf(temp.data).equals(
-                    String.valueOf(key))) {
-
-                // If node to be deleted is found previous
-                // node now points to next node skipping the
-                // current node
-                prev.next = next;
-                // node to be deleted exists
-                exists = true;
-
-                // As soon as we find the node to be deleted
-                // we exit the loop
-                break;
-            }
-
-            // Previous node now points to current node
-            prev = temp;
-
-            // Current node now points to next node
-            temp = temp.next;
-
-            // Next node points the node ahead of current
-            // node
-            next = temp.next;
-        }
-
-        // Comparing the last node with the given key value
-        if (exists == false
-            && String.valueOf(temp.data).equals(
-                String.valueOf(key))) {
-
-            // If found , last node is skipped over
-            prev.next = null;
-
-            // Node to be deleted exists
-            exists = true;
-        }
-
-        // If node to be deleted exists
-        if (exists) {
-
-            // Length of LinkedList reduced
-            length--;
-        }
-
-        // If node to be deleted does not exist
-        else {
-
-            // Print statement
-            System.out.println(
-                "Given Value is not present in linked list");
-        }
-    }
-
-    // Method
-    // To clear the entire LinkedList
-    void clear()
-    {
-
-        // Head now points to null
-        head = null;
-        // length is 0 again
-        length = 0;
-    }
 
     // Method
     // Returns whether List is empty or not
@@ -241,3 +132,5 @@ class list<T> {
         return S + " }";
     }
 }
+//This code is contributed by varunkedia
+//Reference:https://www.geeksforgeeks.org/how-to-implement-generic-linkedlist-in-java/

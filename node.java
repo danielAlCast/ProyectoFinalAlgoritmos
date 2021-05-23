@@ -19,3 +19,5 @@ class node<T> {
         this.next = null;
     }
 }
+//This code is contributed by varunkedia
+//Reference:https://www.geeksforgeeks.org/how-to-implement-generic-linkedlist-in-java/

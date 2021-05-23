@@ -118,4 +118,4 @@ public class linkedList {
 	}
 }
 
-// This code is contributed by Rishabh Mahrsee
+// This code is contributed
