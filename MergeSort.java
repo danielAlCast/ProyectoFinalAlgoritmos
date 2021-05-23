@@ -1,99 +1,121 @@
+// Java program to illustrate merge sorted
+// of linkedList
 
-/* Java program for Merge Sort */
-class MergeSort
-{
-    // Merges two subarrays of arr[].
-    // First subarray is arr[l..m]
-    // Second subarray is arr[m+1..r]
-    void merge(int arr[], int l, int m, int r)
-    {
-        // Find sizes of two subarrays to be merged
-        int n1 = m - l + 1;
-        int n2 = r - m;
+public class linkedList {
+	node head = null;
+	// node a, b;
+	static class node {
+		int val;
+		node next;
 
-        /* Create temp arrays */
-        int L[] = new int[n1];
-        int R[] = new int[n2];
+		public node(int val)
+		{
+			this.val = val;
+		}
+	}
 
-        /*Copy data to temp arrays*/
-        for (int i = 0; i < n1; ++i)
-            L[i] = arr[l + i];
-        for (int j = 0; j < n2; ++j)
-            R[j] = arr[m + 1 + j];
+	node sortedMerge(node a, node b)
+	{
+		node result = null;
+		/* Base cases */
+		if (a == null)
+			return b;
+		if (b == null)
+			return a;
 
-        /* Merge the temp arrays */
+		/* Pick either a or b, and recur */
+		if (a.val <= b.val) {
+			result = a;
+			result.next = sortedMerge(a.next, b);
+		}
+		else {
+			result = b;
+			result.next = sortedMerge(a, b.next);
+		}
+		return result;
+	}
 
-        // Initial indexes of first and second subarrays
-        int i = 0, j = 0;
+	node mergeSort(node h)
+	{
+		// Base case : if head is null
+		if (h == null || h.next == null) {
+			return h;
+		}
 
-        // Initial index of merged subarry array
-        int k = l;
-        while (i < n1 && j < n2) {
-            if (L[i] <= R[j]) {
-                arr[k] = L[i];
-                i++;
-            }
-            else {
-                arr[k] = R[j];
-                j++;
-            }
-            k++;
-        }
+		// get the middle of the list
+		node middle = getMiddle(h);
+		node nextofmiddle = middle.next;
 
-        /* Copy remaining elements of L[] if any */
-        while (i < n1) {
-            arr[k] = L[i];
-            i++;
-            k++;
-        }
+		// set the next of middle node to null
+		middle.next = null;
 
-        /* Copy remaining elements of R[] if any */
-        while (j < n2) {
-            arr[k] = R[j];
-            j++;
-            k++;
-        }
-    }
+		// Apply mergeSort on left list
+		node left = mergeSort(h);
 
-    // Main function that sorts arr[l..r] using
-    // merge()
-    void sort(int arr[], int l, int r)
-    {
-        if (l < r) {
-            // Find the middle point
-            int m =l+ (r-l)/2;
+		// Apply mergeSort on right list
+		node right = mergeSort(nextofmiddle);
 
-            // Sort first and second halves
-            sort(arr, l, m);
-            sort(arr, m + 1, r);
+		// Merge the left and right lists
+		node sortedlist = sortedMerge(left, right);
+		return sortedlist;
+	}
 
-            // Merge the sorted halves
-            merge(arr, l, m, r);
-        }
-    }
+	// Utility function to get the middle of the linked list
+	public static node getMiddle(node head)
+	{
+		if (head == null)
+			return head;
 
-    /* A utility function to print array of size n */
-    static void printArray(int arr[])
-    {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
+		node slow = head, fast = head;
 
-    // Driver code
-    public static void main(String args[])
-    {
-        int arr[] = { 12, 11, 13, 5, 6, 7 };
+		while (fast.next != null && fast.next.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		return slow;
+	}
 
-        System.out.println("Given Array");
-        printArray(arr);
+	void push(int new_data)
+	{
+		/* allocate node */
+		node new_node = new node(new_data);
 
-        MergeSort ob = new MergeSort();
-        ob.sort(arr, 0, arr.length - 1);
+		/* link the old list off the new node */
+		new_node.next = head;
 
-        System.out.println("\nSorted array");
-        printArray(arr);
-    }
+		/* move the head to point to the new node */
+		head = new_node;
+	}
+
+	// Utility function to print the linked list
+	void printList(node headref)
+	{
+		while (headref != null) {
+			System.out.print(headref.val + " ");
+			headref = headref.next;
+		}
+	}
+
+	public static void main(String[] args)
+	{
+
+		linkedList li = new linkedList();
+		/*
+		* Let us create a unsorted linked list to test the functions
+		* created. The list shall be a: 2->3->20->5->10->15
+		*/
+		li.push(15);
+		li.push(10);
+		li.push(5);
+		li.push(20);
+		li.push(3);
+		li.push(2);
+
+		// Apply merge Sort
+		li.head = li.mergeSort(li.head);
+		System.out.print("\n Sorted Linked List is: \n");
+		li.printList(li.head);
+	}
 }
-/* This code is contributed by Rajat Mishra */
+
+// This code is contributed by Rishabh Mahrsee
