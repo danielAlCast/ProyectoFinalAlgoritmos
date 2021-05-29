@@ -107,6 +107,15 @@ class list<T> {
         return false;
     }
     // Method
+   // To clear the entire LinkedList
+       void clear()
+      {
+    // Head now points to null
+      head = null;
+     // length is 0 again
+      length = 0;
+      }
+    // Method
     // Returning the length of LinkedList
     int length() { return this.length; }
 

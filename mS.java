@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class mS{
 
 node sortedMerge(node a, node b)
@@ -62,47 +62,47 @@ node mergeSort(node h)
    }
    return slow;
  }
+ public void readDataString(Scanner s,list c)
+ {
+   while(s.hasNext())
+   {
+    if(s.hasNext())
+    {
+      c.add(s.next());
+    }
+
+   }
+
+ }
+ public void readDataInt(Scanner s,list c)
+ {
+   while(s.hasNext())
+   {
+      if(s.hasNextInt())
+      {
+        c.add(s.nextInt());
+      }
+
+   }
+
+ }
  public static void main(String[] args)
  {
    mS ms=new mS();
+   Scanner scan = new Scanner(System.in);
 
    //Se crea lista vacia que sea de enteros
+    /*
    list<String> list1 = new list<>();
-   System.out.println(
-     "Integer LinkedList created as list1 :");
-   // Adding elements to the above List object
+    ms.readDataString(scan,list1);
+    System.out.println(list1);
+     */
+    //Se crea igual lista
+    list<Integer> list2 = new list<>();
+     ms.readDataInt(scan,list2);
+     list2.head = ms.mergeSort(list2.head);
+     System.out.println(list2);
 
-    //se le agregan datos
-   list1.add("daniel");
-   list1.add("sofia");
-   list1.add("lola");
-
-
-   // Imprime lista sin haber sido ordenadas
-   System.out.println(list1);
-   // Apply merge Sort
-    list1.head = ms.mergeSort(list1.head);
-   System.out.print("\n Sorted Linked List is: \n");
-   System.out.println(list1+"\n"+"\n");
-
-   //Se crea lista vacia que sea de Strings
-   list<Integer> list2 = new list<>();
-   System.out.println(
-     "Integer LinkedList created as list1 :");
-   // Adding elements to the above List object
-
-   //se le agregan datos
-   list2.add(100);
-   list2.add(2000);
-   list2.add(3);
-
-
-   // Imprime lista sin haber sido ordenadas
-   System.out.println(list2);
-   // Apply merge Sort
-    list2.head = ms.mergeSort(list2.head);
-   System.out.print("\n Sorted Linked List is: \n");
-   System.out.println(list2);
  }
 }
 
