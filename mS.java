@@ -79,7 +79,7 @@ node mergeSort(node h)
    return slow;
  }
 
- public int readDataInt(Scanner s,list c)
+ public int readData(Scanner s,list c)
  {
    int lt=s.nextInt();
 
@@ -125,7 +125,7 @@ node mergeSort(node h)
     //Se crea igual lista
 
     list<Integer> list2 = new list<>();
-   listType=ms.readDataInt(scan,list2);
+   listType=ms.readData(scan,list2);
      list2.head = ms.mergeSort(list2.head);
      System.out.println(list2);
 
