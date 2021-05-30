@@ -15,58 +15,67 @@ public class QuickSortLinkedList {
 
         node pivot_prev = start;
         node curr = start;
-        int pivot=0
-        int nodeStart=0;
-        int endStart=0;
+        int pivot=(int)end.data;
 
-        switch(listType){
-          case 0:
-              pivot= end.data.hashCode();
-              nodeStart= start.data.hashCode();
-              break;
-          case 1:
-              String pivotStr=end.data.toString();
-              String startStr=start.data.toString()
-
-              pivot=pivotStr.compareTo(startStr);
-              nodeStart=startStr.compareTo(pivotStr);
-              break;
-        }
-        // iterate till one before the end,
-        // no need to iterate till the end
-        // because end is pivot
         while (start != end)  {
-            if (nodeStart < pivot) {
-              pivot_prev = curr;
-                 int temp = nodeStart;
-                 nodeStart = nodeStart;
-                 nodeStart = temp;
-                 //es el nodo
+            if ((int)start.data < pivot) {
+              // keep tracks of last modified item
+                 pivot_prev = curr;
+                 int temp = (int)curr.data;
+                 curr.data = (int)start.data;
+                 start.data = temp;
                  curr = curr.next;
+             }
+             start = start.next;
+         }
+
+         // swap the position of curr i.e.
+         // next suitable index and pivot
+         int temp =(int) curr.data;
+         curr.data = pivot;
+         end.data = temp;
+         // return one previous to current
+         // because current is now pointing to pivot
+         return pivot_prev;
+    }
+    node paritionLastStr(node start, node end)
+    {
+        if (start == end || start == null || end == null)
+            return start;
+
+        node pivot_prev = start;
+        node curr = start;
+        //Sacar valor de los nodos en Strings
+        String nS=start.data.toString();
+        String nP=end.data.toString();
+        //comparamos para saber el valor de la diferencia entre el final con incial
+        int pivot=nP.compareTo(nS);
+        //comparamos para saber el valor de la diferencia entre el inicial con final
+        int sD=nS.compareTo(nP);
+        //Obtenemos valor de nodo curr en String
+        String currN=curr.data.toString();
+        //System.out.println(curr.data.toString());
+        System.out.println(pivot.data.toString());
+        while (start != end)  {
+          //comparamos las diferencias entre los Strings
+            if (sD < pivot) {
+              // keep tracks of last modified item
+                //adquiere valor del curr anterior
+                 pivot_prev = curr;
+                 String temp = curr.data.toString();
+                 curr.data = start.data.toString();
+                 start.data=temp;
+                 //curr se mueve
+                 curr = curr.next;
+
              }
              start = start.next;
          }
          // swap the position of curr i.e.
          // next suitable index and pivot
-         switch(listType){
-           case 0:
-              int temp = curr.data.hashCode();
-              curr.data.hashCode() = pivot;
-              end.data.hashCode() = temp;
-               break;
-           case 1:
-               String pivotBefore=start.data.toString();
-               String pivotStri=curr.data.toString();
-               String pivotStr=end.data.toString();
-
-               int temp=pivotStr.compareTo(pivotBefore);
-               temp = pivot;
-
-               break;
-         }
-
-
-
+         String temp =curr.data.toString();
+         curr.data= end.data.toString();
+         end.data = temp;
          // return one previous to current
          // because current is now pointing to pivot
          return pivot_prev;
@@ -76,7 +85,7 @@ public class QuickSortLinkedList {
             return;
 
         // split list and partion recurse
-        node pivot_prev = paritionLast(start, end);
+        node pivot_prev = paritionLastStr(start, end);
         sort(start, pivot_prev);
 
         // if pivot is picked and moved to the start,
@@ -118,15 +127,17 @@ public static void main(String[] args)
     {
         QuickSortLinkedList qS= new QuickSortLinkedList();
         Scanner scan = new Scanner(System.in);
-        int n;
 
+      //dependiendo del tipo de variable que quieras la declaras en <->
         list<String> list1 = new list<>();
-         qS.readDataString(scan,list1);
+         qS.readData(scan,list1);
          System.out.println(list1);
 
-          n=list1.length();
+         node n = list1.head;
+         while (n.next != null)
+             n = n.next;
 
-         //list1.sort(list1.head, n);
+         qS.sort(list1.head, n);
           System.out.println(list1);
 
     }

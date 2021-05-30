@@ -1,6 +1,7 @@
 import java.util.*;
 public class mS{
 private static int listType;
+
 node sortedMerge(node a, node b)
 {
   int nodeA=0;
