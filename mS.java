@@ -1,8 +1,10 @@
 import java.util.*;
 public class mS{
-
+private static int listType;
 node sortedMerge(node a, node b)
 {
+  int nodeA=0;
+  int nodeB=0;
   node result = null;
   /* Base cases */
   if (a == null)
@@ -14,7 +16,21 @@ node sortedMerge(node a, node b)
 
   //se utiliza hashCode para que no haya problema
   //cuando se compara string,int o char
-  if (((a.data).hashCode()) <=((b.data).hashCode()) ){
+
+  //crear un if para saber
+  if(listType==0){
+    nodeA=a.data.hashCode();
+    nodeB=b.data.hashCode();
+  }
+  if(listType==1){
+      String nA =a.data.toString();
+       String nB= b.data.toString();
+       nodeA=nA.compareTo(nB);
+       nodeB=nB.compareTo(nA);
+
+  }
+  if (nodeA<=nodeB)
+  {
     result = a;
     result.next = sortedMerge(a.next, b);
   }
@@ -62,29 +78,31 @@ node mergeSort(node h)
    }
    return slow;
  }
- public void readDataString(Scanner s,list c)
+
+ public int readDataInt(Scanner s,list c)
  {
+   int lt=s.nextInt();
+
    while(s.hasNext())
    {
-    if(s.hasNext())
-    {
-      c.add(s.next());
+     if(lt==0)
+     {
+       if(s.hasNextInt())
+       {
+         c.add(s.nextInt());
+       }
+     }
+     if(lt==1)
+     {
+       if(s.hasNext())
+       {
+         c.add(s.next());
+       }
+     }
+
     }
 
-   }
-
- }
- public void readDataInt(Scanner s,list c)
- {
-   while(s.hasNext())
-   {
-      if(s.hasNextInt())
-      {
-        c.add(s.nextInt());
-      }
-
-   }
-
+   return lt;
  }
  public static void main(String[] args)
  {
@@ -92,14 +110,22 @@ node mergeSort(node h)
    Scanner scan = new Scanner(System.in);
 
    //Se crea lista vacia que sea de enteros
-    /*
+/*
    list<String> list1 = new list<>();
-    ms.readDataString(scan,list1);
+  //  ms.readDataString(scan,list1);
+  list1.add("oso");
+  list1.add("perro");
+  list1.add("gato");
+  list1.add("gallo");
+  list1.add("ave");
+    list1.head = ms.mergeSort(list1.head);
     System.out.println(list1);
-     */
+  //  ose perro gato gallo ave
+*/
     //Se crea igual lista
+
     list<Integer> list2 = new list<>();
-     ms.readDataInt(scan,list2);
+   listType=ms.readDataInt(scan,list2);
      list2.head = ms.mergeSort(list2.head);
      System.out.println(list2);
 

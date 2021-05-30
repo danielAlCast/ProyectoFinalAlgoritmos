@@ -1,5 +1,5 @@
 // Java program for Quick Sort on Singly Linled List
-
+import java.util.*;
 /*sort a linked list using quick sort*/
 public
 class QuickSortLinkedList {
@@ -11,18 +11,18 @@ class QuickSortLinkedList {
         if (start == end || start == null || end == null)
             return start;
 
-        Node pivot_prev = start;
-        Node curr = start;
-        int pivot = end.data;
+        node pivot_prev = start;
+        node curr = start;
+        int pivot = (end.data).hashCode();
 
         // iterate till one before the end,
         // no need to iterate till the end
         // because end is pivot
         while (start != end) {
-            if (start.data < pivot) {
+            if ((start.data).hashCode() < pivot) {
                 // keep tracks of last modified item
                 pivot_prev = curr;
-                int temp = curr.data;
+                int temp = (curr.data).hashCode();
                 curr.data = start.data;
                 start.data = temp;
                 curr = curr.next;
@@ -32,7 +32,7 @@ class QuickSortLinkedList {
 
         // swap the position of curr i.e.
         // next suitable index and pivot
-        int temp = curr.data;
+        int temp = (curr.data).hashCode();
         curr.data = pivot;
         end.data = temp;
 
@@ -47,7 +47,7 @@ class QuickSortLinkedList {
             return;
 
         // split list and partion recurse
-        Node pivot_prev = paritionLast(start, end);
+        node pivot_prev = paritionLast(start, end);
         sort(start, pivot_prev);
 
         // if pivot is picked and moved to the start,
@@ -63,30 +63,36 @@ class QuickSortLinkedList {
                  && pivot_prev.next != null)
             sort(pivot_prev.next.next, end);
     }
+    public void readDataString(Scanner s,list c)
+    {
+      while(s.hasNext())
+      {
+       if(s.hasNext())
+       {
+         c.add(s.next());
+       }
+
+      }
+    }
 
     // Driver Code
 public
     static void main(String[] args)
     {
-        QuickSortLinkedList list
-            = new QuickSortLinkedList();
-        list.addNode(30);
-        list.addNode(3);
-        list.addNode(4);
-        list.addNode(20);
-        list.addNode(5);
+        QuickSortLinkedList qS= new QuickSortLinkedList();
+        Scanner scan = new Scanner(System.in);
+        int n;
 
-        Node n = list.head;
-        while (n.next != null)
-            n = n.next;
+        list<String> list1 = new list<>();
+         qS.readDataString(scan,list1);
+         System.out.println(list1);
 
-        System.out.println("Linked List before sorting");
-        list.printList(list.head);
+          n=list1.length();
 
-        list.sort(list.head, n);
+         //list1.sort(list1.head, n);
+          System.out.println(list1);
 
-        System.out.println("\nLinked List after sorting");
-        list.printList(list.head);
+
     }
 }
 
