@@ -17,6 +17,7 @@ public class QuickSortLinkedList {
         node curr = start;
         int pivot=0
         int nodeStart=0;
+        int endStart=0;
 
         switch(listType){
           case 0:
@@ -34,56 +35,43 @@ public class QuickSortLinkedList {
         // iterate till one before the end,
         // no need to iterate till the end
         // because end is pivot
-        while (start != end) {
+        while (start != end)  {
             if (nodeStart < pivot) {
-                // keep tracks of last modified item
-                pivot_prev = curr;
+              pivot_prev = curr;
+                 int temp = nodeStart;
+                 nodeStart = nodeStart;
+                 nodeStart = temp;
+                 //es el nodo
+                 curr = curr.next;
+             }
+             start = start.next;
+         }
+         // swap the position of curr i.e.
+         // next suitable index and pivot
+         switch(listType){
+           case 0:
+              int temp = curr.data.hashCode();
+              curr.data.hashCode() = pivot;
+              end.data.hashCode() = temp;
+               break;
+           case 1:
+               String pivotBefore=start.data.toString();
+               String pivotStri=curr.data.toString();
+               String pivotStr=end.data.toString();
 
-                curr.data = start.data;
-                start.data = temp;
-                curr = curr.next;
+               int temp=pivotStr.compareTo(pivotBefore);
+               temp = pivot;
 
-                switch(listType){
-                  case 0:
-                    int temp = curr.data.hashCode();
-                      break;
-                  case 1:
-                    String temp= curr.data.toString();
-                      break;
-                }
-            }
-            start = start.next;
-        }
-        // swap the position of curr i.e.
-        // next suitable index and pivot
-        int temp = (curr.data).hashCode();
-        curr.data = pivot;
-        end.data = temp;
+               break;
+         }
 
-        // return one previous to current
-        // because current is now pointing to pivot
-        return pivot_prev;
+
+
+         // return one previous to current
+         // because current is now pointing to pivot
+         return pivot_prev;
     }
-    /*
-    publin int getTemp(node curr){
-      int t;
-      switch(listType){
-        case 0:
-            t= curr.data.hashCode();
-        case 1:
-            String pivotStr=end.data.toString();
-            String startStr=start.data.toString()
-
-            pivot=pivotStr.compareTo(startStr);
-            nodeStart=startStr.compareTo(pivotStr);
-            break;
-      }
-      return
-    }
-    */
-
-    void sort(node start, node end)
-    {
+    void sort(node start, node end){
         if(start == null || start == end|| start == end.next )
             return;
 
