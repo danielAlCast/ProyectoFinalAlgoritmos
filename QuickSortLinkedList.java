@@ -3,6 +3,7 @@ import java.util.*;
 /*sort a linked list using quick sort*/
 public class QuickSortLinkedList {
 
+  //guarda que tipo de datos es la lista
   private static int listType;
     // takes first and last node,
     // but do not break any links in
