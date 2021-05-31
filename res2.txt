@@ -1,2 +1,0 @@
-{ Alan -> Alba -> Daniel -> Denisse -> Lalo -> Lourdes -> Lupita -> Zaira }
-Tiempo de ejecucion (ms): 37
