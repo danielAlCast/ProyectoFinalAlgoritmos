@@ -1,4 +1,6 @@
 import java.util.*;
+import java.time.Instant;
+import java.time.Duration;
 public class mS{
 private static int listType;
 
@@ -25,13 +27,11 @@ node sortedMerge(node a, node b)
   }
   if(listType==1){
       String nA =a.data.toString();
-       String nB= b.data.toString();
-       nodeA=nA.compareTo(nB);
-       nodeB=nB.compareTo(nA);
-
+      String nB= b.data.toString();
+      nodeA=nA.compareTo(nB);
+      nodeB=nB.compareTo(nA);
   }
-  if (nodeA<=nodeB)
-  {
+  if (nodeA<=nodeB){
     result = a;
     result.next = sortedMerge(a.next, b);
   }
@@ -45,7 +45,7 @@ node sortedMerge(node a, node b)
 node mergeSort(node h)
  {
   // Base case : if head is null
-  if (h == null || h.next == null) {
+  if (h == null || h.next == null){
     return h;
   }
 
@@ -73,7 +73,7 @@ node mergeSort(node h)
 
    node slow = head, fast = head;
 
-   while (fast.next != null && fast.next.next != null) {
+   while (fast.next != null && fast.next.next != null){
      slow = slow.next;
      fast = fast.next.next;
    }
@@ -102,6 +102,7 @@ node mergeSort(node h)
  }
  public static void main(String[] args)
  {
+   Instant start = Instant.now();
    mS ms=new mS();
    Scanner scan = new Scanner(System.in);
 
@@ -109,7 +110,9 @@ node mergeSort(node h)
    listType=ms.readData(scan,list2);
      list2.head = ms.mergeSort(list2.head);
      System.out.println(list2);
-
+     Instant finish = Instant.now();
+     long timeElapsed = Duration.between(start, finish).toMillis();
+     System.out.println("Tiempo de ejecucion (ms): " + timeElapsed);
  }
 }
 
