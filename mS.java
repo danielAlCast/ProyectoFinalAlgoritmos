@@ -84,19 +84,14 @@ node mergeSort(node h)
  {
    int lt=s.nextInt();
 
-   while(s.hasNext())
-   {
-     if(lt==0)
-     {
-       if(s.hasNextInt())
-       {
+   while(s.hasNext()){
+     if(lt==0){
+       if(s.hasNextInt()){
          c.add(s.nextInt());
        }
      }
-     if(lt==1)
-     {
-       if(s.hasNext())
-       {
+     if(lt==1){
+       if(s.hasNext()){
          c.add(s.next());
        }
      }
@@ -109,21 +104,6 @@ node mergeSort(node h)
  {
    mS ms=new mS();
    Scanner scan = new Scanner(System.in);
-
-   //Se crea lista vacia que sea de enteros
-/*
-   list<String> list1 = new list<>();
-  //  ms.readDataString(scan,list1);
-  list1.add("oso");
-  list1.add("perro");
-  list1.add("gato");
-  list1.add("gallo");
-  list1.add("ave");
-    list1.head = ms.mergeSort(list1.head);
-    System.out.println(list1);
-  //  ose perro gato gallo ave
-*/
-    //Se crea igual lista
 
     list<Integer> list2 = new list<>();
    listType=ms.readData(scan,list2);

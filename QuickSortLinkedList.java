@@ -55,7 +55,8 @@ public class QuickSortLinkedList {
         //Obtenemos valor de nodo curr en String
         String currN=curr.data.toString();
         //System.out.println(curr.data.toString());
-        System.out.println(pivot.data.toString());
+        //System.out.println(pivot.data.toString());
+
         while (start != end)  {
           //comparamos las diferencias entre los Strings
             if (sD < pivot) {
@@ -70,6 +71,9 @@ public class QuickSortLinkedList {
 
              }
              start = start.next;
+             nS=start.data.toString();
+             sD=nS.compareTo(nP);
+             pivot=nP.compareTo(nS);
          }
          // swap the position of curr i.e.
          // next suitable index and pivot
