@@ -1,8 +1,9 @@
 // Java program for Quick Sort on Singly Linled List
 import java.util.*;
+import java.time.Instant;
+import java.time.Duration;
 /*sort a linked list using quick sort*/
 public class QuickSortLinkedList {
-
   //guarda que tipo de datos es la lista
   private static int listType;
     // takes first and last node,
@@ -17,8 +18,8 @@ public class QuickSortLinkedList {
         node curr = start;
         int pivot=(int)end.data;
 
-        while (start != end)  {
-            if ((int)start.data < pivot) {
+        while (start != end){
+            if ((int)start.data < pivot){
               // keep tracks of last modified item
                  pivot_prev = curr;
                  int temp = (int)curr.data;
@@ -57,9 +58,9 @@ public class QuickSortLinkedList {
         //System.out.println(curr.data.toString());
         //System.out.println(pivot.data.toString());
 
-        while (start != end)  {
+        while (start != end){
           //comparamos las diferencias entre los Strings
-            if (sD < pivot) {
+            if (sD < pivot){
               // keep tracks of last modified item
                 //adquiere valor del curr anterior
                  pivot_prev = curr;
@@ -68,7 +69,6 @@ public class QuickSortLinkedList {
                  start.data=temp;
                  //curr se mueve
                  curr = curr.next;
-
              }
              start = start.next;
              nS=start.data.toString();
@@ -87,7 +87,6 @@ public class QuickSortLinkedList {
     void sort(node start, node end){
         if(start == null || start == end|| start == end.next )
             return;
-
         // split list and partion recurse
         node pivot_prev = paritionLastStr(start, end);
         sort(start, pivot_prev);
@@ -101,15 +100,13 @@ public class QuickSortLinkedList {
         // if pivot is in between of the list,
         // start from next of pivot,
         // since we have pivot_prev, so we move two nodes
-        else if (pivot_prev != null
-                 && pivot_prev.next != null)
+        else if (pivot_prev != null && pivot_prev.next != null)
             sort(pivot_prev.next.next, end);
     }
     public int readData(Scanner s,list c){
       int lt=s.nextInt();
 
       while(s.hasNext()){
-
         if(lt==0){
           if(s.hasNextInt()){
             c.add(s.nextInt());
@@ -130,6 +127,7 @@ public class QuickSortLinkedList {
 public static void main(String[] args)
     {
         QuickSortLinkedList qS= new QuickSortLinkedList();
+        Instant start = Instant.now();
         Scanner scan = new Scanner(System.in);
 
       //dependiendo del tipo de variable que quieras la declaras en <->
@@ -142,9 +140,12 @@ public static void main(String[] args)
              n = n.next;
 
          qS.sort(list1.head, n);
-          System.out.println(list1);
-
+         System.out.println(list1);
+         Instant finish = Instant.now();
+         long timeElapsed = Duration.between(start, finish).toMillis();
+         System.out.println("Tiempo de ejecucion (ms): " + timeElapsed);
     }
+
 }
 
 // This code is contributed by trinadumca
