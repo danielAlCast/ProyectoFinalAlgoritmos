@@ -133,7 +133,6 @@ public static void main(String[] args)
       //dependiendo del tipo de variable que quieras la declaras en <->
         list<String> list1 = new list<>();
          qS.readData(scan,list1);
-         System.out.println(list1);
 
          node n = list1.head;
          while (n.next != null)
