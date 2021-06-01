@@ -20,7 +20,7 @@ node sortedMerge(node a, node b)
   //se utiliza hashCode para que no haya problema
   //cuando se compara string,int o char
 
-  //crear un if para saber
+  //crear un if para saber que tipo de variable
   if(listType==0){
     nodeA=a.data.hashCode();
     nodeB=b.data.hashCode();
@@ -31,9 +31,11 @@ node sortedMerge(node a, node b)
       nodeA=nA.compareTo(nB);
       nodeB=nB.compareTo(nA);
   }
+   //contador++, aqui se hace las comparaciones
   if (nodeA<=nodeB){
     result = a;
     result.next = sortedMerge(a.next, b);
+
   }
   else {
     result = b;

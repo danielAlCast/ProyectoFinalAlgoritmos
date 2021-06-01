@@ -28,6 +28,7 @@ public class QuickSortLinkedList {
                  curr = curr.next;
              }
              start = start.next;
+             //aqui pongo el contador
          }
 
          // swap the position of curr i.e.
@@ -55,6 +56,7 @@ public class QuickSortLinkedList {
         int sD=nS.compareTo(nP);
         //Obtenemos valor de nodo curr en String
         String currN=curr.data.toString();
+        //las dos de ariba cuent
         //System.out.println(curr.data.toString());
         //System.out.println(pivot.data.toString());
 
@@ -74,6 +76,7 @@ public class QuickSortLinkedList {
              nS=start.data.toString();
              sD=nS.compareTo(nP);
              pivot=nP.compareTo(nS);
+             //aqui se pone el contador
          }
          // swap the position of curr i.e.
          // next suitable index and pivot
