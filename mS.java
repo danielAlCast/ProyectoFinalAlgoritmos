@@ -4,16 +4,16 @@ import java.time.Duration;
 public class mS{
 private static int listType;
 
-node sortedMerge(node a, node b)
-{
-  int nodeA=0;
-  int nodeB=0;
-  node result = null;
-  /* Base cases */
-  if (a == null)
-    return b;
-  if (b == null)
-    return a;
+  node sortedMerge(node a, node b)
+   {
+     int nodeA=0;
+     int nodeB=0;
+     node result = null;
+    /* Base cases */
+    if (a == null)
+      return b;
+    if (b == null)
+      return a;
 
   /* Pick either a or b, and recur */
 
@@ -21,28 +21,29 @@ node sortedMerge(node a, node b)
   //cuando se compara string,int o char
 
   //crear un if para saber que tipo de variable
-  if(listType==0){
-    nodeA=a.data.hashCode();
-    nodeB=b.data.hashCode();
-  }
-  if(listType==1){
-      String nA =a.data.toString();
-      String nB= b.data.toString();
-      nodeA=nA.compareTo(nB);
-      nodeB=nB.compareTo(nA);
-  }
-   //contador++, aqui se hace las comparaciones
-  if (nodeA<=nodeB){
-    result = a;
-    result.next = sortedMerge(a.next, b);
+    if(listType==0){
+      nodeA=a.data.hashCode();
+      nodeB=b.data.hashCode();
+    }
+    if(listType==1){
+        String nA =a.data.toString();
+        String nB= b.data.toString();
+        nodeA=nA.compareTo(nB);
+        nodeB=nB.compareTo(nA);
+      //dos mas al contador
+    }
+     //contador++, aqui se hace las comparaciones
+    if (nodeA<=nodeB){
+      result = a;
+      result.next = sortedMerge(a.next, b);
 
+    }
+    else {
+      result = b;
+      result.next = sortedMerge(a, b.next);
+    }
+    return result;
   }
-  else {
-    result = b;
-    result.next = sortedMerge(a, b.next);
-  }
-  return result;
-}
 
 node mergeSort(node h)
  {
