@@ -3,7 +3,7 @@ import java.time.Instant;
 import java.time.Duration;
 public class mS{
 private static int listType;
-
+private static int counter;
   node sortedMerge(node a, node b)
    {
      int nodeA=0;
@@ -31,8 +31,10 @@ private static int listType;
         nodeA=nA.compareTo(nB);
         nodeB=nB.compareTo(nA);
       //dos mas al contador
+        counter+=2;
     }
      //contador++, aqui se hace las comparaciones
+     counter+=1;
     if (nodeA<=nodeB){
       result = a;
       result.next = sortedMerge(a.next, b);
@@ -108,14 +110,15 @@ node mergeSort(node h)
    Instant start = Instant.now();
    mS ms=new mS();
    Scanner scan = new Scanner(System.in);
-
-    list<Integer> list2 = new list<>();
+   counter=0;
+    list<String> list2 = new list<>();
    listType=ms.readData(scan,list2);
      list2.head = ms.mergeSort(list2.head);
      System.out.println(list2);
      Instant finish = Instant.now();
      long timeElapsed = Duration.between(start, finish).toMillis();
      System.out.println("Tiempo de ejecucion (ms): " + timeElapsed);
+     System.out.println("Numero de operaciones relizadas: " +counter);
  }
 }
 
