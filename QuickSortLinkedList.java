@@ -96,16 +96,17 @@ public class QuickSortLinkedList {
             return;
         // split list and partion recurse
         node pivot_prev;
-        switch(listType){
-          case 0:
+        if(listType==0){
           pivot_prev = paritionLast(start, end);
-          break;
-
-          default:
-          pivot_prev = paritionLastStr(start, end);
-          break;
         }
-        //pivot_prev = paritionLast(start, end);
+        if(listType==1){
+          pivot_prev = paritionLastStr(start, end);
+        }else{
+          //en caso de que no sea ninguno de los tipo de variables
+          pivot_prev=null;
+          System.out.println("No está dentro de String o int");
+        }
+
         sort(start, pivot_prev);
         // if pivot is picked and moved to the start,
         // that means start and pivot is same
@@ -148,7 +149,7 @@ public static void main(String[] args)
 
       //dependiendo del tipo de variable que quieras la declaras en <->
         list<String> list1 = new list<>();
-         qS.readData(scan,list1);
+         listType=qS.readData(scan,list1);
 
          node n = list1.head;
          while (n.next != null)
