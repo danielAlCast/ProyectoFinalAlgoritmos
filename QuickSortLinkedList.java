@@ -91,7 +91,23 @@ public class QuickSortLinkedList {
         if(start == null || start == end|| start == end.next )
             return;
         // split list and partion recurse
+<<<<<<< Updated upstream
         node pivot_prev = paritionLastStr(start, end);
+=======
+        node pivot_prev;
+        if(listType==0){
+          pivot_prev=paritionLast(start, end);
+
+        }
+        if(listType==1){
+          pivot_prev=paritionLastStr(start, end);
+        }else{
+          //en caso de que no sea entero ni String
+          pivot_prev=null;
+          System.out.println("La lista enlazada no es String o int");
+        }
+        //pivot_prev = paritionLast(start, end);
+>>>>>>> Stashed changes
         sort(start, pivot_prev);
 
         // if pivot is picked and moved to the start,
@@ -135,7 +151,7 @@ public static void main(String[] args)
 
       //dependiendo del tipo de variable que quieras la declaras en <->
         list<String> list1 = new list<>();
-         qS.readData(scan,list1);
+         listType=qS.readData(scan,list1);
 
          node n = list1.head;
          while (n.next != null)
