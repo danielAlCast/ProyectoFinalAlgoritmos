@@ -1,500 +1,160 @@
-1 humanidad
-humano
-persona
-gente
-hombre
-mujer
-bebe
-adolescente
-adulto
-adulta
-anciano
-don
-caballero
-dama
-individuo
-cuerpo
-pierna
-pie
-talon
-espinilla
-rodilla
-muslo
-cabeza
-cara
-boca
-labio
-diente
-ojo
-nariz
-barba
-bigote
-cabello
-oreja
-cerebro
-estomago
-brazo
-codo
-hombro
-una
-mano
-palma
-dedo
-gluteos
-abdomen
-higado
-musculo
-cuello
-corazon
-mente
-alma
-espiritu
-pecho
-cintura
-cadera
-espalda
-sangre
-carne
-piel
-hueso
-resfriado
-gripe
-diarrea
-salud
-enfermedad
-familia
-amigo
-conocido
-colega
-pareja
-esposo
-matrimonio
-amor
-padre
-madre
-hermano
-hijo
-abuelo
-bisabuelo
-nieto
-bisnieto
-primo
-tio
-sobrino
-criatura
-especie
-ser
-vida
-nacimiento
-reproduccion
-muerte
-naturaleza
-campo
-bosque
-selva
-jungla
-desierto
-costa
-playa
-río
-laguna
-lago
-cerro
-monte
-mar
-cerro
-luz
-energia
-animal
-perro
-gato
-vaca
-cerdo
-caballo
-yegua
-oveja
-mono
-raton
-rata
-tigre
-conejo
-dragon
-ciervo
-rana
-leon
-jirafa
-elefante
-pajaro
-gallina
-gorrion
-cuervo
-aguila
-halcon
-pez
-camaron
-langosta
-sardina
-atun
-calamar
-pulpo
-insecto
-bicho
-mariposa
-polilla
-saltamontes
-mosca
-mosquito
-cucaracha
-caracol
-babosa
-lombriz
-marisco
-molusco
-lagarto
-serpiente
-cocodrilo
-alimento
-comida
-bebida
-vegetal
-planta
-pasto
-flor
-fruta
-semilla
-arbol
-hoja
-raiz
-tallo
-hongo
-ciruela
-pino
-bambu
-nuez
-almendra
-arroz
-avena
-cebada
-trigo
-verdura
-patatas
-judias
-rabano
-zanahoria
-manzana
-naranja
-platano
-pera
-castaño
-durazno
-tomate
-sandia
-carne
-gaseosa
-tiempo
-calendario
-edad
-epoca
-era
-fecha
-instante
-momento
-segundo
-minuto
-hora
-dia
-semana
-mes
-decada
-siglo
-milenio
-ayer
-hoy
-amanecer
-mediodia
-tarde
-anochecer
-noche
-lunes
-martes
-miercoles
-jueves
-viernes
-sabado
-domingo
-ambiente
-espacio
-entorno
-area
-superficie
-volumen
-region
-zona
-lado
-mundo
-planeta
-sol
-luna
-estrella
-galaxia
-universo
-clima
-despejado
-nublado
-lluvia
-nieve
-viento
-trueno
-rayo
-tormenta
-cielo
-este
-oeste
-sur
-norte
-derecha
-izquierda
-diagonal
-exterior
-interior
-calor
-agua
-hielo
-vapor
-fuego
-gas
-aire
-tierra
-piso
-suelo
-metal
-hierro
-oro
-plata
-plomo
-sal
-barro
-lodo
-sociedad
-comunidad
-reunion
-encuentro
-estructura
-administracion
-organizacion
-asociacion
-empresa
-equipo
-autoridad
-cargo
-campana
-club
-comision
-congreso
-consejo
-partido
-pais
-nacion
-gobierno
-estado
-provincia
-departamento
-municipio
-democracia
-dictadura
-politica
-politico
-presidente
-ministro
-director
-representante
-gobernador
-policía
-bomberos
-capital
-ciudad
-poblacion
-pueblo
-villa
-obligacion
-libertad
-derecho
-permiso
-prohibicion
-constitucion
-ley
-decreto
-norma
-economia
-consumo
-demanda
-comercio
-mercado
-servicio
-producto
-transaccion
-almacenar
-hotel
-fabrica
-cuenta
-boleto
-entrada
-dinero
-billete
-vuelto
-cambio
-maquina
-expendedora
-precio
-tarifa
-valor
-escritorio
-silla
-mesa
-cama
-dormitorio
-habitacion
-cuarto
-oficina
-panel
-puerta
-ventana
-entrada
-hogar
-casa
-apartamento
-departamento
-edificio
-elevador
-ascensor
-escalera
-aparato
-camara
-aguja
-clavo
-hilo
-cuerda
-cordel
-cordon
-bolsillo
-bolso
-bolsa
-paraguas
-parasol
-pantalla
-pomo
-llave
-trancar
-arma
-escultura
-libro
-revista
-cuadro
-grabado
-electricidad
-corriente
-base
-pata
-conexion
-denisse
-daniel
-laura
-flora
-estandarte
-coliflor
-perejil
-manzanilla
-mango
-platano
-ropa
-prenda
-manga
-solapa
-cuello
-boton
-cremallera
-cierre
-cinturon
-zapato
-gafas
-camisa
-camiseta
-zapatilla
-cordones
-abrigo
-chaqueta
-calcetines
-bragas
-calzoncillo
-sujetador
-sosten
-falda
-color
-blanco
-negro
-gris
-rojo
-naranja
-anaranjado
-amarillo
-verde
-celeste
-azul
-violeta
-rosa
-rosado
-marron
-cafe
-cultura
-autor
-actuacion
-espectador
-espectaculo
-entretenimiento
-arte
-cine
-dibujo
-pintura
-musica
-religion
-dios
-articulo
-educacion
-escuela
-instituto
-colegio
-universidad
-clase
-curso
-estudio
-formacion
-analisis
-investigacion
-conocimiento
-idea
-informacion
-dato
-forma
-manera
-modo
-estilo
-figura
-elemento
-uso
-utilizacion
-ciencia
-aritmetica
-historia
-geografia
-educacion
-fisica
-deporte
-carrera
-competicion
-competencia
-ayuda
-favor
-apoyo
-busqueda
-duda
-pregunta
+0  2109     2351     2887     2660     2237  
+   2367     2493     2634     2039     2146  
+   2804     2692     2332     2426     2310  
+   2782     2604     2126     2013     2341  
+   2595     2262     2528     2337     2438  
+   2687     2473     2390     2544     2748  
+   2027     2881     2614     2149     2144  
+   2220     2165     2606     2618     2463  
+   2864     2486     2613     2084     2179  
+   2783     2014     2117     2055     2322  
+   2580     2627     2440     2464     2639  
+   2575     2710     2832     2415     2451  
+   2546     2827     2284     2449     2498  
+   2270     2304     2195     2860     2467  
+   2002     2555     2302     2133     2516  
+   2785     2009     2175     2874     2162  
+   2452     2495     2812     2878     2770  
+   2703     2693     2780     2825     2184  
+   2786     2047     2393     2502     2042  
+   2176     2363     2303     2616     2299  
+   2590     2622     2551     2114     2592  
+   2824     2049     2721     2672     2392  
+   2729     2662     2562     2335     2090  
+   2291     2007     2019     2617     2751  
+   2000     2594     2801     2319     2480  
+   2450     2059     2709     2349     2289  
+   2010     2170     2738     2410     2603  
+   2318     2206     2699     2205     2534  
+   2593     2391     2731     2531     2098  
+   2224     2706     2866     2561     2359  
+   2342     2373     2536     2384     2736  
+   2073     2631     2448     2724     2623  
+   2258     2255     2381     2306     2444  
+   2377     2831     2880     2251     2233  
+   2101     2566     2487     2609     2755  
+   2324     2112     2638     2008     2776  
+   2412     2766     2137     2469     2418  
+   2714     2829     2642     2476     2395  
+   2261     2331     2557     2252     2219  
+   2357     2635     2048     2208     2201  
+   2588     2236     2282     2169     2247  
+   2474     2715     2873     2896     2171  
+   2046     2267     2292     2458     2327  
+   2015     2691     2620     2218     2733  
+   2645     2708     2752     2560     2746  
+   2321     2056     2250     2626     2494  
+   2769     2601     2681     2018     2069  
+   2279     2123     2579     2173     2525  
+   2814     2598     2711     2704     2468  
+   2610     2078     2718     2670     2481  
+   2160     2333     2119     2509     2847  
+   2400     2139     2871     2110     2522  
+   2500     2652     2174     2235     2838  
+   2186     2121     2859     2190     2750  
+   2065     2849     2676     2834     2459  
+   2191     2726     2624     2185     2177  
+   2688     2661     2143     2694     2813  
+   2256     2406     2484     2857     2667  
+   2629     2875     2420     2116     2202  
+   2720     2788     2488     2630     2651  
+   2778     2229     2890     2122     2385  
+   2869     2466     2436     2371     2166  
+   2396     2033     2462     2442     2777  
+   2196     2742     2348     2053     2329  
+   2012     2784     2895     2657     2730  
+   2022     2621     2815     2872     2883  
+   2062     2513     2087     2758     2260  
+   2296     2061     2221     2089     2806  
+   2434     2297     2072     2886     2686  
+   2674     2003     2607     2552     2851  
+   2328     2280     2210     2810     2803  
+   2298     2471     2643     2088     2535  
+   2006     2506     2841     2004     2354  
+   2697     2067     2765     2648     2268  
+   2031     2432     2159     2211     2288  
+   2188     2269     2153     2194     2526  
+   2673     2819     2408     2017     2051  
+   2591     2454     2772     2898     2585  
+   2309     2756     2301     2882     2659  
+   2501     2106     2757     2563     2192  
+   2663     2313     2278     2344     2200  
+   2230     2330     2232     2754     2653  
+   2685     2894     2640     2443     2865  
+   2016     2633     2095     2168     2244  
+   2058     2781     2612     2520     2399  
+   2839     2413     2222     2040     2325  
+   2632     2761     2511     2416     2148  
+   2702     2043     2840     2679     2650  
+   2485     2514     2152     2052     2366  
+   2740     2716     2821     2370     2130  
+   2861     2127     2553     2504     2554  
+   2507     2728     2226     2419     2539  
+   2136     2523     2816     2571     2572  
+   2423     2356     2655     2086     2538  
+   2723     2145     2214     2517     2155  
+   2567     2475     2187     2038     2542  
+   2113     2374     2225     2774     2394  
+   2068     2862     2796     2245     2037  
+   2092     2636     2338     2375     2198  
+   2129     2460     2705     2790     2238  
+   2011     2060     2677     2358     2589  
+   2518     2764     2382     2054     2760  
+   2775     2372     2425     2311     2249  
+   2545     2641     2024     2428     2272  
+   2105     2312     2134     2512     2102  
+   2172     2577     2305     2435     2741  
+   2021     2848     2858     2492     2744  
+   2584     2550     2132     2899     2489  
+   2005     2189     2026     2074     2453  
+   2227     2529     2877     2431     2644  
+   2800     2445     2096     2100     2118  
+   2515     2216     2833     2753     2797  
+   2362     2076     2376     2231     2154  
+   2856     2808     2647     2745     2316  
+   2212     2283     2897     2361     2263  
+   2199     2843     2543     2411     2203  
+   2023     2336     2323     2763     2178  
+   2713     2794     2248     2573     2063  
+   2759     2682     2020     2893     2131  
+   2353     2737     2805     2548     2666  
+   2234     2850     2582     2789     2276  
+   2265     2317     2427     2028     2347  
+   2104     2091     2505     2447     2597  
+   2793     2586     2429     2079     2209  
+   2558     2519     2649     2120     2094  
+   2863     2293     2181     2066     2701  
+   2398     2340     2193     2103     2025  
+   2045     2253     2574     2503     2807  
+   2792     2611     2034     2891     2583  
+   2541     2083     2107     2619     2465  
+   2461     2124     2870     2570     2326  
+   2457     2600     2664     2795     2314  
+   2530     2407     2695     2093     2213  
+   2147     2791     2141     2690     2900  
+   2799     2771     2739     2853     2524  
+   2576     2879     2818     2320     2568  
+   2180     2242     2285     2424     2540  
+   2569     2779     2389     2287     2254  
+   2665     2239     2470     2527     2345  
+   2386     2707     2290     2167     2183  
+   2735     2295     2830     2837     2628  
+   2241     2787     2404     2035     2844  
+   2364     2277     2081     2294     2732  
+   2556     2346     2508     2050     2430  
+   2654     2719     2029     2602     2421  
+   2243     2080     2401     2350     2798  
+   2140     2532     2150     2315     2064  
+   2156     2671     2414     2743     2889  
+   2157     2547     2071     2111     2403  
+   2578     2828     2868     2482     2409  
+   2885     2587     2842     2138     2712  
+   2675     2085     2768     2684     2867  
+   2164     2343     2472     2490     2696  
+   2128     2405     2658     2075     2510  
+   2700     2637     2846     2823     2036  
+   2030     2246     2369     2097     2388  
+   2478     2855     2722     2151     2044  
+   2446     2352     2497     2397     2533  
+   2274     2135     2521     2483     2441  
+   2387     2646     2334     2817     2223
