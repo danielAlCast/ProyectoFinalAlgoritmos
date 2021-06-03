@@ -6,6 +6,7 @@ import java.time.Duration;
 public class QuickSortLinkedList {
   //guarda que tipo de datos es la lista
   private static int listType;
+  public static int counter;
     // takes first and last node,
     // but do not break any links in
     // the whole linked list
@@ -28,6 +29,7 @@ public class QuickSortLinkedList {
                  curr = curr.next;
              }
              start = start.next;
+             counter+=1;
              //aqui pongo el contador
          }
 
@@ -57,6 +59,7 @@ public class QuickSortLinkedList {
         //Obtenemos valor de nodo curr en String
         String currN=curr.data.toString();
         //las dos de ariba cuent
+        counter+=2;
         //System.out.println(curr.data.toString());
         //System.out.println(pivot.data.toString());
 
@@ -77,6 +80,7 @@ public class QuickSortLinkedList {
              sD=nS.compareTo(nP);
              pivot=nP.compareTo(nS);
              //aqui se pone el contador
+             counter+=2;
          }
          // swap the position of curr i.e.
          // next suitable index and pivot
@@ -91,25 +95,19 @@ public class QuickSortLinkedList {
         if(start == null || start == end|| start == end.next )
             return;
         // split list and partion recurse
-<<<<<<< Updated upstream
-        node pivot_prev = paritionLastStr(start, end);
-=======
         node pivot_prev;
         if(listType==0){
-          pivot_prev=paritionLast(start, end);
-
+          pivot_prev = paritionLast(start, end);
         }
         if(listType==1){
-          pivot_prev=paritionLastStr(start, end);
+          pivot_prev = paritionLastStr(start, end);
         }else{
-          //en caso de que no sea entero ni String
+          //en caso de que no sea ninguno de los tipo de variables
           pivot_prev=null;
-          System.out.println("La lista enlazada no es String o int");
+          System.out.println("No está dentro de String o int");
         }
-        //pivot_prev = paritionLast(start, end);
->>>>>>> Stashed changes
-        sort(start, pivot_prev);
 
+        sort(start, pivot_prev);
         // if pivot is picked and moved to the start,
         // that means start and pivot is same
         // so pick from next of pivot
@@ -156,12 +154,13 @@ public static void main(String[] args)
          node n = list1.head;
          while (n.next != null)
              n = n.next;
-
+         counter=0;
          qS.sort(list1.head, n);
          System.out.println(list1);
          Instant finish = Instant.now();
          long timeElapsed = Duration.between(start, finish).toMillis();
          System.out.println("Tiempo de ejecucion (ms): " + timeElapsed);
+         System.out.println("Numero de operaciones relizadas: " +counter);
     }
 
 }
