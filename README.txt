@@ -33,3 +33,6 @@ QUICKSORT
 IMPORTANTE: En la línea 134 del algoritmo QuickSortLinkedList se debe cambiar que tipo
 de entrada va a recibir el programa, ya sea Integer o String
 #Ejemplo:	list<String> list1 = new list<>();
+
+
+#LINK PARA VIDEO EXPLICANDO ALGORITMOS:https://drive.google.com/file/d/1o4PYavVbGiXi09SiQ7Q4cKKdceD-Am4S/view?usp=sharing
